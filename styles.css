@@ -51,3 +51,36 @@ nav a {
 .card:hover {
     transform: scale(1.05);
 }
+
+.area-titulo {
+    margin-top: 50px;
+    font-size: 2rem;
+    color: #e63946;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.equipo-oculto {
+    display: none;
+    margin-top: 15px;
+}
+
+.subcards {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.subcard {
+    background: #1a1a1a;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 120px;
+}
+
+.subcard img {
+    width: 100%;
+    border-radius: 10px;
+}
