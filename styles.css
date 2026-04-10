@@ -161,5 +161,164 @@ nav a {
     background: rgba(0,0,0,0.5);
 }
 
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between; /* 👈 CLAVE */
+    align-items: center;
+    z-index: 1000;
+}
 
+/* CAMBIO AL HACER SCROLL */
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+/* LINKS */
+.navbar a {
+    color: white;
+    margin-left: 30px;
+    text-decoration: none;
+    position: relative;
+    font-weight: 500;
+}
+
+/* ANIMACIÓN SUBRAYADO */
+.navbar a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #2ecc71;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* MENÚ HAMBURGUESA (oculto en PC) */
+.menu-toggle {
+    display: none;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    #nav-menu {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: black;
+        width: 200px;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #nav-menu a {
+        display: block;
+        margin: 15px 0;
+    }
+
+    #nav-menu.active {
+        display: flex;
+    }
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden; /* 👈 evita que se corte */
+}
+#nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    box-sizing: border-box;
+}
+.navbar {
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(8px);
+}
+.navbar {
+    padding: 10px 40px; /* 👈 más delgada */
+}
+
+.logo-btn:hover {
+    background: #2ecc71;
+    box-shadow: 0 0 15px #2ecc71;
+}
+.logo-btn {
+    padding: 8px 18px;
+    border-radius: 25px;
+    border: 2px solid #2ecc71;
+}
+
+.logo-btn:hover {
+    background: #2ecc71;
+    box-shadow: 0 0 15px #2ecc71;
+}
+
+.logo-btn {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border: 2px solid white;   /* 👈 blanco */
+}
+
+.quienes {
+    background: #000000; /* color claro como tu imagen */
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.quienes h2 {
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+}
+
+.img-equipo {
+    width: 60%;
+    max-width: 900px;
+}
+
+.quienes p {
+    color: rgb(255, 255, 255);
+    max-width: 700px;
+    margin: auto;
+    font-size: 14px;
+}
+
+.img-equipo {
+    border-radius: 10px;
+}
+
+.quienes p {
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
