@@ -13,3 +13,4 @@ function toggleEquipo(id) {
         seccion.style.display = "block";
     }
 }
+

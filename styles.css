@@ -85,3 +85,40 @@ nav a {
     border-radius: 10px;
 }
 
+.subcard i {
+    font-size: 20px;
+    color: #0a66c2;
+    margin-top: 5px;
+}
+
+.subcard i:hover {
+    color: #004182;
+}
+
+.card i {
+    font-size: 20px;
+    color: #0a66c2;
+    margin-top: 5px;
+}
+
+.card i:hover {
+    color: #004182;
+}
+
+.card, .subcard {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover, .subcard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 10px 20px rgba(80, 200, 120, 0.6);
+    border: 1px solid rgba(46, 204, 113, 0.8);
+}
+.area-titulo {
+    text-align: center;
+    color: #2ecc71;
+}
+
+
+
+
