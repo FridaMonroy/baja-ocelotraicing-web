@@ -48,12 +48,133 @@ const teamMembers = {
         image: 'img/ISAI.jpeg',
         linkedin: 'https://linkedin.com/in/pierre-alexis'
     },
-    'Isai': {
+    'Leo': {
         name: 'Leonardo Campos',
         major: 'Ingeniería Mecatronica',
         role: 'Lider de Chasis y ergonomía',
         nickname: 'Leo',
         image: 'img/LEO.jpeg',
+        linkedin: 'https://linkedin.com/in/pierre-alexis'
+    },
+    'Sasil': {
+        name: 'Sasil Villareal',
+        major: 'Ingeniería Mecatronica',
+        role: 'Relaciones Públicas',
+        nickname: 'Sasil',
+        image: 'img/SASIL.jpeg',
+        linkedin: 'https://linkedin.com/in/pierre-alexis'
+    },
+    'Frida': {
+        name: 'Frida Monroy',
+        major: 'Ingeniería Mecatronica',
+        role: 'Costos',
+        nickname: 'Frida',
+        image: 'img/FRIDA.jpeg',
+        linkedin: 'https://linkedin.com/in/pierre-alexis'
+    },
+    'Aldo': {
+        name: 'Aldo Gomez',
+        major: 'Ingeniería Mecatronica',
+        role: 'Marketing',
+        nickname: 'Aldo',
+        image: 'img/ALDO.jpeg',
+        linkedin: 'https://linkedin.com/in/pierre-alexis'
+    },
+    'Anette': {
+        name: 'Anette Gomez',
+        major: 'Ingeniería Mecatronica',
+        role: 'Diseño CAD',
+        nickname: 'Annete',
+        image: 'img/ANETTE.jpeg',
+        linkedin: 'https://linkedin.com/in/pierre-alexis'
+    },
+    'Lalo': {
+        name: 'Lalo Gomez',
+        major: 'Ingeniería Mecatronica',
+        role: 'Analisis FEA',
+        nickname: 'Lalote',
+        image: 'img/LALOTE.jpeg',
+        linkedin: 'https://linkedin.com/in/pierre-alexis'
+    },
+    'Diego': {
+        name: 'Diego Hernandez',
+        major: 'Ingeniería Mecatronica',
+        role: 'Analisis FEA',
+        nickname: 'Dieguito',
+        image: 'img/DIEGO.jpeg',
+        linkedin: 'https://linkedin.com/in/pierre-alexis'
+    },
+    'Karen': {
+        name: 'Karen Sandoval',
+        major: 'Ingeniería Mecatronica',
+        role: 'Analisis FEA',
+        nickname: 'Karen',
+        image: 'img/KAREN.jpeg',
+        linkedin: 'https://linkedin.com/in/pierre-alexis'
+    }
+    ,
+    'Christian': {
+        name: 'Christian Benitez',
+        major: 'Ingeniería Mecatronica',
+        role: 'Lider de Telemetría',
+        nickname: 'Chris',
+        image: 'img/CHRISTIAN.jpeg',
+        linkedin: 'https://linkedin.com/in/pierre-alexis'
+    },
+    'Caleb': {
+        name: 'Caleb Tacuba',
+        major: 'Ingeniería Mecatronica',
+        role: 'Ensamble',
+        nickname: 'Caleb',
+        image: 'img/CALEB.jpeg',
+        linkedin: 'https://linkedin.com/in/pierre-alexis'
+    },
+    'Yair': {
+        name: 'Yair Rosario',
+        major: 'Ingeniería Mecatronica',
+        role: 'Ensamble',
+        nickname: 'Yayo',
+        image: 'img/YAIR.jpeg',
+        linkedin: 'https://linkedin.com/in/pierre-alexis'
+    },
+    'Poncho': {
+        name: 'Alfonso Lindavista',
+        major: 'Ingeniería Mecatronica',
+        role: 'Ensamble',
+        nickname: 'Poncho',
+        image: 'img/PONCHO.jpeg',
+        linkedin: 'https://linkedin.com/in/pierre-alexis'
+    },
+    'Cesar': {
+        name: 'Cesar Zocalo',
+        major: 'Ingeniería Mecatronica',
+        role: 'Ensamble',
+        nickname: 'Cesar',
+        image: 'img/CESAR.jpeg',
+        linkedin: 'https://linkedin.com/in/pierre-alexis'
+    },
+    'Asiel': {
+        name: 'Asiel Cuba',
+        major: 'Ingeniería Mecatronica',
+        role: 'Ensamble',
+        nickname: 'Asiel',
+        image: 'img/ASIEL.jpeg',
+        linkedin: 'https://linkedin.com/in/pierre-alexis'
+    },
+    'Gera': {
+        name: 'Gerardo Universidad',
+        major: 'Ingeniería Mecatronica',
+        role: 'Ensamble',
+        nickname: 'Gera',
+        image: 'img/GERA.jpeg',
+        linkedin: 'https://linkedin.com/in/pierre-alexis'
+    },
+    'Paul': {
+        name: 'Paul España',
+        major: 'Ingeniería Mecatronica',
+        role: 'Ensamble',
+        nickname: 'Pol',
+        image: 'img/PAUL.jpeg',
         linkedin: 'https://linkedin.com/in/pierre-alexis'
     }
     // Agrega más miembros aquí
