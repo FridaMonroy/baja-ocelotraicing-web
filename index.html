@@ -29,8 +29,13 @@
     <img src="img/equipo.jpg" alt="Equipo" class="img-equipo">
 
     <h1><p>
-        Somos un equipo estudiantil dedicado al diseño y construcción de vehículos todo terreno,
-        formado por jóvenes ingenieros apasionados por la innovación y la excelencia técnica.
+        Somos un equipo estudiantil dedicado al diseño y construcción de vehículos 
+        todo terreno, formado por jóvenes ingenieros apasionados por la innovación y 
+        la excelencia técnica. Nuestra misión es crear prototipos competitivos que 
+        representen el talento mexicano en torneos nacionales e internacionales, 
+        destacando por nuestro compromiso, trabajo en equipo y espíritu de superación. 
+        Con múltiples campeonatos en Baja SAE México, seguimos demostrando que la ingeniería 
+        y la pasión pueden llevarnos a lo más alto.
     </p></h1>
 
 </section>
@@ -44,274 +49,133 @@
     <nav id="nav-menu">
         <a href="#">Inicio</a>
         <a href="#equipo">Equipo</a>
-        <a href="#proyectos">Proyectos</a>
+        <a href="#logros">Logros</a>
         <a href="#contacto">Contacto</a>
     </nav>
 
 </header>
 
-<section id="equipo">
-    <h2>Nuestro Equipo</h2>
+<section id="equipo" class="team-section">
+  <h2>NUESTRO EQUIPO</h2>
 
-    <!-- GESTIÓN -->
-    <h2 class="area-titulo">Gestión</h2>
-    <div class="cards">
+  <!-- 👑 CAPITÁN -->
+  <div class="category-block">
+    <h3 class="category-title">Capitán General</h3>
+    <div class="captain-wrapper">
+      <div class="team-card" onclick="openModal('Mike')">
+        <img src="img/MIKE.jpeg" alt="Miguel Ochoa">
+        <h3>Miguel Ochoa</h3>
+        <p>Capitán</p>
+      </div>
+    </div>
+  </div>
 
-        <div class="card">
-            <img src="img/MIKE.jpeg">
-            <h3>Miguel Hernandez</h3>
-            <p>Capitán</p>
+  <!-- 🔧 SISTEMAS -->
+  <div class="systems-wrapper">
+
+    <!-- SISTEMA 1: Administración -->
+    <div class="system-block">
+      <h3 class="system-title">Administración</h3>
+      
+      <h4 class="role-subtitle">Líderes</h4>
+      <div class="team-grid leaders-grid">
+        <div class="team-card" onclick="openModal('Brenda')">
+          <img src="img/BRENDA.jpeg" alt="Brenda">
+          <h3>Brenda Hernandez</h3>
+          <p>Líder de Administración</p>
         </div>
+      </div>
 
-        <div class="card">
-            <img src="https://via.placeholder.com/150">
-            <h3>Alfonso Campos</h3>
-            <p>Faculti</p>
+      <h4 class="role-subtitle">Integrantes</h4>
+      <div class="team-grid members-grid">
+        <div class="team-card" onclick="openModal('Rodrigo')">
+          <img src="img/RODRIGO.jpeg" alt="Tesorero">
+          <h3>Rodrigo Salas</h3>
+          <p>Tesorero</p>
         </div>
+        <div class="team-card" onclick="openModal('miembro-chasis-2')">
+          <img src="fotos/miembro2.jpg" alt="Integrante">
+          <h3>Nombre</h3>
+          <p>Análisis FEA</p>
+        </div>
+        <!-- Agrega más integrantes -->
+      </div>
+    </div>
+    
+    <!-- SISTEMA 1: CHASIS -->
+    <div class="system-block">
+      <h3 class="system-title">🔩 Chasis & Suspensión</h3>
+      
+      <h4 class="role-subtitle">Líderes</h4>
+      <div class="team-grid leaders-grid">
+        <div class="team-card" onclick="openModal('lider-chasis')">
+          <img src="fotos/lider-chasis.jpg" alt="Líder Chasis">
+          <h3>Nombre Líder</h3>
+          <p>Líder de Chasis</p>
+        </div>
+      </div>
 
+      <h4 class="role-subtitle">Integrantes</h4>
+      <div class="team-grid members-grid">
+        <div class="team-card" onclick="openModal('miembro-chasis-1')">
+          <img src="fotos/miembro1.jpg" alt="Integrante">
+          <h3>Nombre</h3>
+          <p>Diseño CAD</p>
+        </div>
+        <div class="team-card" onclick="openModal('miembro-chasis-2')">
+          <img src="fotos/miembro2.jpg" alt="Integrante">
+          <h3>Nombre</h3>
+          <p>Análisis FEA</p>
+        </div>
+        <!-- Agrega más integrantes -->
+      </div>
     </div>
 
-    <!-- LÍDERES DE EQUIPO -->
-    <h2 class="area-titulo">Líderes de Equipo</h2>
-    <div class="cards">
-
-<!-- TARJETA PRINCIPAL ADMINISTRACION -->
-<div class="card" onclick="toggleEquipo('administracion')">
-    <img src="img/BRENDA.jpeg">
-    <h3>Brenda Hernandez</h3>
-    <p>Lider de Administracion</p>
-    <a href="https://www.linkedin.com/in/brenda-carolina-hern%C3%A1ndez-flores-214b06301/" target="_blank">
-        <i class="fab fa-linkedin"></i>
-    </a>
-</div>
-
-<!-- EQUIPO ADMINISTRACION DESPLEGABLE -->
-<div id="administracion" class="equipo-oculto">
-
-    <div class="subcards">
-
-        <div class="subcard">
-            <img src="img/RODRIGO.jpeg">
-            <p>Rodrigo Salas</p>
+    <!-- SISTEMA 2: POWERTRAIN -->
+    <div class="system-block">
+      <h3 class="system-title">⚡ Powertrain</h3>
+      <h4 class="role-subtitle">Líderes</h4>
+      <div class="team-grid leaders-grid">
+        <div class="team-card" onclick="openModal('lider-motor')">
+          <img src="fotos/lider-motor.jpg" alt="Líder Motor">
+          <h3>Nombre</h3>
+          <p>Líder de Motor</p>
         </div>
-
-        <div class="subcard">
-            <img src="img/FRIDA 2.jpg">
-            <p>Frida Monroy</p>
-        </div>
-
-        <div class="subcard">
-            <img src="img/SASIL.jpg">
-            <p>Sasil Villa</p>
-        </div>
-
-        <div class="subcard">
-            <img src="img/ALDO.jpg">
-            <p>Aldo Guzman</p>
-        </div>
-
+      </div>
+      <h4 class="role-subtitle">Integrantes</h4>
+      <div class="team-grid members-grid">
+        <!-- Integrantes de motor -->
+      </div>
     </div>
 
-</div>
+    <!-- Agrega más sistemas (Electrónica, Frenos, Aerodinámica, etc.) -->
 
-<!-- TARJETA PRINCIPAL -->
-<div class="card" onclick="toggleEquipo('frenos')">
-    <img src="img/ISAI.jpeg">
-    <h3>Isai Vilchis</h3>
-    <p>Lider de Frenos, Suspension y direccion</p>
-</div>
-
-<!-- EQUIPO DESPLEGABLE -->
-<div id="frenos" class="equipo-oculto">
-
-    <div class="subcards">
-
-        <div class="subcard">
-            <img src="img/PAUL.jpeg">
-            <p>Pol Dominguez</p>
-        </div>
-
-        <div class="subcard">
-            <img src="img/GERA.jpeg">
-            <p>Gera Fernandez</p>
-            <a href="https://www.linkedin.com/in/gerardo-luna-b46b39331?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank">
-             <i class="fab fa-linkedin"></i>
-            </a>
-        </div>
-
-        <div class="subcard">
-            <img src="img/CESAR.jpeg">
-            <p>Cesar Cosmo</p>
-        </div>
-
-        <div class="subcard">
-            <img src="img/ASIEL.jpeg">
-            <p>Asiel Casmir</p>
-        </div>
-
-        <div class="subcard">
-            <img src="img/PONCHO.jpeg">
-            <p>Poncho Cualitu</p>
-        </div>
-
-    </div>
-
-</div>
-
-<!-- TARJETA PRINCIPAL CHASIS -->
-<div class="card" onclick="toggleEquipo('chasis')">
-    <img src="img/LEO.jpeg">
-    <h3>Leo Sanchez</h3>
-    <p>Lider de Chasis y Ergonomia</p>
-    <a href="https://www.linkedin.com/in/leonardomontesc?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank">
-      <i class="fab fa-linkedin"></i>
-    </a>
-</div>
-
-<!-- EQUIPO CHASIS DESPLEGABLE -->
-<div id="chasis" class="equipo-oculto">
-
-    <div class="subcards">
-
-        <div class="subcard">
-            <img src="img/ANETTE.jpeg">
-            <p>Annete Gonzalez</p>
-        </div>
-
-        <div class="subcard">
-            <img src="img/LALOTE.jpeg">
-            <p>Lalo Ursa</p>
-        </div>
-
-        <div class="subcard">
-            <img src="img/DIEGO.jpeg">
-            <p>Diego Montes</p>
-            <a href="https://www.linkedin.com/in/diego-mtz-stgo?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank">
-              <i class="fab fa-linkedin"></i>
-            </a>
-        </div>
-
-        <div class="subcard">
-            <img src="img/KAREN.jpeg">
-            <p>Karen Villareal</p>
-        </div>
-
-    </div>
-</div>
-
-<!-- TARJETA PRINCIPAL POWERTRAIN -->
-<div class="card" onclick="toggleEquipo('powertrain')">
-    <img src="img/AARON.jpeg">
-    <h3>Aron Gracia</h3>
-    <p>Lider de Powertrain</p>
-    <a href="https://www.linkedin.com/in/aaron-neriga-01446726a?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank">
-        <i class="fab fa-linkedin"></i>
-    </a>
-</div>
-
-<!-- EQUIPO POWERTRAIN DESPLEGABLE -->
-<div id="powertrain" class="equipo-oculto">
-
-    <div class="subcards">
-
-        <div class="subcard">
-            <img src="img/MARCO.jpeg">
-            <p>Marco Montori</p>
-        </div>
-
-        <div class="subcard">
-            <img src="img/JP.jpeg">
-            <p>Juan Pablo Rodriguez</p>
-        </div>
-
-        <div class="subcard">
-            <img src="img/DANTE.jpeg">
-            <p>Dante Duran</p>
-        </div>
-
-        <div class="subcard">
-            <img src="img/MIGUEL.jpeg">
-            <p>Miguel Guerrero</p>
-        </div>
-
-        <div class="subcard">
-            <img src="img/ALFONSO.jpeg">
-            <p>Alfonso Rosa</p>
-        </div>
-
-        <div class="subcard">
-            <img src="img/IRVIN.jpeg">
-            <p>Irvin Salinas</p>
-        </div>
-
-    </div>
-
-</div>
-
-<!-- TARJETA PRINCIPAL MANUFACTURA  -->
-<div class="card" onclick="toggleEquipo('manufactura')">
-    <img src="img/LALO.jpeg">
-    <h3>Lalote Guzman</h3>
-    <p>Lider de Manufactura</p>
-</div>
-
-<!-- EQUIPO MANUFACTURA DESPLEGABLE -->
-<div id="manufactura" class="equipo-oculto">
-
-    <div class="subcards">
-
-        <div class="subcard">
-            <img src="img/EVELYN.jpeg">
-            <p>Evelyn Albarado</p>
-            <a href="https://www.linkedin.com/in/evelyne-itzel-marquez-meza-b86171331?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">
-              <i class="fab fa-linkedin"></i>
-            </a>
-        </div>
-
-        <div class="subcard">
-            <img src="img/GOYO.jpeg">
-            <p>Goyon Perez</p>
-            <a href="https://www.linkedin.com/in/irvin-lopez-solano-95b3461a2?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-        </div>
-
-    </div>
-
-</div>
-
-<!-- TARJETA PRINCIPAL TELEMETRIA -->
-<div class="card" onclick="toggleEquipo('telemetria')">
-    <img src="img/CHRISTIAN.jpeg">
-    <h3>Christian Villa</h3>
-    <p>Lider de Telemetria</p>
-</div>
-
-<!-- EQUIPO TELEMETRIA DESPLEGABLE -->
-<div id="telemetria" class="equipo-oculto">
-
-    <div class="subcards">
-
-        <div class="subcard">
-            <img src="img/CALEB.jpeg">
-            <p>Caleb Martinez</p>
-        </div>
-
-        <div class="subcard">
-            <img src="img/YAIR.jpeg">
-            <p>Yair Fernandez</p>
-        </div>
-
-    </div>
-
-</div>
-
-    </div>
-
+  </div>
 </section>
 
-<section id="proyectos">
-    <h2>Proyecto Baja</h2>
+<!-- MODAL (Tarjeta Emergente) -->
+<div id="teamModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        
+        <div class="modal-body">
+            <img id="modalImg" src="" alt="" class="modal-img">
+            <div class="modal-info">
+                <h2 id="modalName">NOMBRE</h2>
+                <h4 id="modalMajor">Ingeniería</h4>
+                <p><strong>Rol:</strong> <span id="modalRole">Rol</span></p>
+                <p><strong>Apodo:</strong> <span id="modalNickname">-</span></p>
+                <a href="#" id="modalLinkedIn" class="linkedin-btn" target="_blank">
+                    <i class="fab fa-linkedin"></i> Conecta en LinkedIn
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section id="logros">
+    <h2>Logros</h2>
     <p>Ocelot Racing es un equipo estudiantil que diseña y construye vehículos todo terreno, destacando por innovación, trabajo en equipo y campeonatos en Baja SAE México.</p>
 </section>
 
