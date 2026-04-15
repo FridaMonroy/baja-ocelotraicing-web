@@ -17,16 +17,16 @@ function toggleEquipo(id) {
 // DATOS DE LOS MIEMBROS (personaliza esto)
 const teamMembers = {
     'Mike': {
-        name: 'Miguel Ochoa',
-        major: 'Ingeniería Mecatronica',
+        name: 'Miguel Villavicencio',
+        major: 'Ingeniería Mecatrónica',
         role: 'Capitan',
         nickname: 'Mike',
         image: 'img/MIKE.jpeg',
         linkedin: 'https://linkedin.com/in/pierre-alexis'
     },
     'Brenda': {
-        name: 'Brenda Hernandez',
-        major: 'Ingeniería Mecatronica',
+        name: 'Brenda Hernández',
+        major: 'Ingeniería Biónica',
         role: 'Líder de Administración',
         nickname: 'Caro',
         image: 'img/BRENDA.jpeg',
@@ -34,9 +34,9 @@ const teamMembers = {
     },
     'Rodrigo': {
         name: 'Rodrigo Salas',
-        major: 'Ingeniería Mecatronica',
-        role: 'Tesorero',
-        nickname: 'Ro',
+        major: 'Ingeniería Mecatrónica',
+        role: 'Responsable de Recursos materiales',
+        nickname: 'RS',
         image: 'img/RODRIGO.jpeg',
         linkedin: 'https://linkedin.com/in/pierre-alexis'
     },
@@ -49,7 +49,7 @@ const teamMembers = {
         linkedin: 'https://linkedin.com/in/pierre-alexis'
     },
     'Leo': {
-        name: 'Leonardo Campos',
+        name: 'Leonardo Montes',
         major: 'Ingeniería Mecatronica',
         role: 'Lider de Chasis y ergonomía',
         nickname: 'Leo',
@@ -59,7 +59,7 @@ const teamMembers = {
     'Sasil': {
         name: 'Sasil Villareal',
         major: 'Ingeniería Mecatronica',
-        role: 'Relaciones Públicas',
+        role: 'Responsable de vinculación',
         nickname: 'Sasil',
         image: 'img/SASIL.jpeg',
         linkedin: 'https://linkedin.com/in/pierre-alexis'
@@ -67,54 +67,54 @@ const teamMembers = {
     'Frida': {
         name: 'Frida Monroy',
         major: 'Ingeniería Mecatronica',
-        role: 'Costos',
+        role: 'Recluta de Recursos materiales',
         nickname: 'Frida',
         image: 'img/FRIDA.jpeg',
         linkedin: 'https://linkedin.com/in/pierre-alexis'
     },
     'Aldo': {
-        name: 'Aldo Gomez',
-        major: 'Ingeniería Mecatronica',
-        role: 'Marketing',
+        name: 'Aldo Morales',
+        major: 'Ingeniería Biónicaa',
+        role: 'Recluta de redes sociales',
         nickname: 'Aldo',
         image: 'img/ALDO.jpeg',
         linkedin: 'https://linkedin.com/in/pierre-alexis'
     },
     'Anette': {
-        name: 'Anette Gomez',
+        name: 'Anette García',
         major: 'Ingeniería Mecatronica',
-        role: 'Diseño CAD',
+        role: 'Responsable de Chasís',
         nickname: 'Annete',
         image: 'img/ANETTE.jpeg',
         linkedin: 'https://linkedin.com/in/pierre-alexis'
     },
     'Lalo': {
-        name: 'Lalo Gomez',
-        major: 'Ingeniería Mecatronica',
-        role: 'Analisis FEA',
+        name: 'Eduardo Olvera',
+        major: 'ISISA',
+        role: 'Recluta de Chasís',
         nickname: 'Lalote',
         image: 'img/LALOTE.jpeg',
         linkedin: 'https://linkedin.com/in/pierre-alexis'
     },
     'Diego': {
-        name: 'Diego Hernandez',
+        name: 'Diego Martinez',
         major: 'Ingeniería Mecatronica',
-        role: 'Analisis FEA',
+        role: 'Responsable de Ergonomía y Presidente',
         nickname: 'Dieguito',
         image: 'img/DIEGO.jpeg',
         linkedin: 'https://linkedin.com/in/pierre-alexis'
     },
     'Karen': {
-        name: 'Karen Sandoval',
+        name: 'Karen Flores',
         major: 'Ingeniería Mecatronica',
-        role: 'Analisis FEA',
+        role: 'Recluta de Ergonomía',
         nickname: 'Karen',
         image: 'img/KAREN.jpeg',
         linkedin: 'https://linkedin.com/in/pierre-alexis'
     }
     ,
     'Christian': {
-        name: 'Christian Benitez',
+        name: 'Christian Rodriguez',
         major: 'Ingeniería Mecatronica',
         role: 'Lider de Telemetría',
         nickname: 'Chris',
@@ -122,59 +122,139 @@ const teamMembers = {
         linkedin: 'https://linkedin.com/in/pierre-alexis'
     },
     'Caleb': {
-        name: 'Caleb Tacuba',
+        name: 'Caleb Riaño',
         major: 'Ingeniería Mecatronica',
-        role: 'Ensamble',
+        role: 'Responsable de Telemetría',
         nickname: 'Caleb',
         image: 'img/CALEB.jpeg',
         linkedin: 'https://linkedin.com/in/pierre-alexis'
     },
     'Yair': {
-        name: 'Yair Rosario',
+        name: 'Yair Ventura',
         major: 'Ingeniería Mecatronica',
-        role: 'Ensamble',
+        role: 'Recluta de Telemetría',
         nickname: 'Yayo',
         image: 'img/YAIR.jpeg',
         linkedin: 'https://linkedin.com/in/pierre-alexis'
     },
     'Poncho': {
-        name: 'Alfonso Lindavista',
+        name: 'Alfonso Soriano',
         major: 'Ingeniería Mecatronica',
-        role: 'Ensamble',
-        nickname: 'Poncho',
+        role: 'Responsable de suspensión',
+        nickname: 'Ponchete',
         image: 'img/PONCHO.jpeg',
         linkedin: 'https://linkedin.com/in/pierre-alexis'
     },
     'Cesar': {
-        name: 'Cesar Zocalo',
+        name: 'Cesar Barron',
         major: 'Ingeniería Mecatronica',
-        role: 'Ensamble',
-        nickname: 'Cesar',
+        role: 'Responsable de dirección',
+        nickname: 'Little Cesar',
         image: 'img/CESAR.jpeg',
         linkedin: 'https://linkedin.com/in/pierre-alexis'
     },
     'Asiel': {
-        name: 'Asiel Cuba',
+        name: 'Asiel Méndez',
         major: 'Ingeniería Mecatronica',
-        role: 'Ensamble',
+        role: 'Recluta de Suspensión',
         nickname: 'Asiel',
         image: 'img/ASIEL.jpeg',
         linkedin: 'https://linkedin.com/in/pierre-alexis'
     },
     'Gera': {
-        name: 'Gerardo Universidad',
+        name: 'Gerardo Luna',
         major: 'Ingeniería Mecatronica',
-        role: 'Ensamble',
+        role: 'Responsable de frenos',
         nickname: 'Gera',
         image: 'img/GERA.jpeg',
         linkedin: 'https://linkedin.com/in/pierre-alexis'
     },
     'Paul': {
-        name: 'Paul España',
+        name: 'Paul Morales',
         major: 'Ingeniería Mecatronica',
-        role: 'Ensamble',
+        role: 'Recluta de frenos',
         nickname: 'Pol',
         image: 'img/PAUL.jpeg',
+        linkedin: 'https://linkedin.com/in/pierre-alexis'
+    },
+    'Lalote': {
+        name: 'Eduardo Rodriguez',
+        major: 'Ingeniería Mecatronica',
+        role: 'Líder de Manufactura',
+        nickname: 'Lalo',
+        image: 'img/LALO.jpeg',
+        linkedin: 'https://linkedin.com/in/pierre-alexis'
+    },
+    'Goyo': {
+        name: 'Irvin Lopez',
+        major: 'Ingeniería Mecatronica',
+        role: 'Responsable de Manufactura',
+        nickname: 'Goyo',
+        image: 'img/GOYO.jpeg',
+        linkedin: 'https://linkedin.com/in/pierre-alexis'
+    },
+    'Evelyn': {
+        name: 'Evelyn Marquez',
+        major: 'Ingeniería Mecatronica',
+        role: 'Recluta de Manufactura',
+        nickname: 'Compañera',
+        image: 'img/EVELYN.jpeg',
+        linkedin: 'https://linkedin.com/in/pierre-alexis'
+    },
+    'Aaron': {
+        name: 'Aaron Nériga',
+        major: 'ISISA',
+        role: 'Líder de PowerTrain',
+        nickname: 'Aaron',
+        image: 'img/AARON.jpeg',
+        linkedin: 'https://linkedin.com/in/pierre-alexis'
+    },
+    'JP': {
+        name: 'Juan Pablo Hérnandez',
+        major: 'Ingeniería en Sistema Automotrices',
+        role: 'Responsable de CVT',
+        nickname: 'JP',
+        image: 'img/JP.jpeg',
+        linkedin: 'https://linkedin.com/in/pierre-alexis'
+    },
+    'Marco': {
+        name: 'Marco Piña',
+        major: 'Ingeniería Mecatronica',
+        role: 'Responsable en PT delantero',
+        nickname: 'MarcoPolo',
+        image: 'img/MARCO.jpeg',
+        linkedin: 'https://linkedin.com/in/pierre-alexis'
+    },
+    'Dante': {
+        name: 'Dante Luna',
+        major: 'Ingeniería Mecatronica',
+        role: 'Responsable de powertrain trasero ',
+        nickname: 'Dante',
+        image: 'img/DANTE.jpeg',
+        linkedin: 'https://linkedin.com/in/pierre-alexis'
+    },
+    'Alfonso': {
+        name: 'Alfonso De la Rosa',
+        major: 'Ingeniería en Sistemas Automotrices',
+        role: 'Recluta de PowerTrain trasero RWD ',
+        nickname: 'Poncho2.0',
+        image: 'img/ALFONSO.jpeg',
+        linkedin: 'https://linkedin.com/in/pierre-alexis'
+    },
+    'Irvin': {
+        name: 'Irvin Plascencia ',
+        major: 'Ingeniería en Sistemas Automotrices',
+        role: 'Recluta PowerTrain delantero FWD ',
+        nickname: 'Irvin',
+        image: 'img/Irvin.jpeg',
+        linkedin: 'https://linkedin.com/in/pierre-alexis'
+    },
+    'Miguel': {
+        name: 'Miguel De Jesus',
+        major: 'Ingeniería en Sistemas Automotrices',
+        role: 'Recluta de CVT ',
+        nickname: 'Miguel',
+        image: 'img/MIGUEL.jpeg',
         linkedin: 'https://linkedin.com/in/pierre-alexis'
     }
     // Agrega más miembros aquí
