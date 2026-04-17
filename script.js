@@ -54,7 +54,7 @@ const teamMembers = {
         role: 'Lider de Chasis y ergonomía',
         nickname: 'Leo',
         image: 'img/LEO.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'https://www.linkedin.com/in/leonardomontesc?utm_source=share_via&utm_content=profile&utm_medium=member_ios'
     },
     'Sasil': {
         name: 'Sasil Villareal',
@@ -102,7 +102,7 @@ const teamMembers = {
         role: 'Responsable de Ergonomía y Presidente',
         nickname: 'Dieguito',
         image: 'img/DIEGO.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'https://www.linkedin.com/in/diego-mtz-stgo?utm_source=share_via&utm_content=profile&utm_medium=member_ios'
     },
     'Karen': {
         name: 'Karen Flores',
@@ -167,7 +167,7 @@ const teamMembers = {
         role: 'Responsable de frenos',
         nickname: 'Gera',
         image: 'img/GERA.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'https://www.linkedin.com/in/gerardo-luna-b46b39331?utm_source=share_via&utm_content=profile&utm_medium=member_ios'
     },
     'Paul': {
         name: 'Paul Morales',
@@ -183,7 +183,7 @@ const teamMembers = {
         role: 'Líder de Manufactura',
         nickname: 'Lalo',
         image: 'img/LALO.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'https://www.linkedin.com/in/eduardorodriguezmedina?utm_source=share_via&utm_content=profile&utm_medium=member_android'
     },
     'Goyo': {
         name: 'Irvin Lopez',
@@ -191,7 +191,7 @@ const teamMembers = {
         role: 'Responsable de Manufactura',
         nickname: 'Goyo',
         image: 'img/GOYO.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'https://www.linkedin.com/in/irvin-lopez-solano-95b3461a2?utm_source=share_via&utm_content=profile&utm_medium=member_ios'
     },
     'Evelyn': {
         name: 'Evelyn Marquez',
@@ -199,7 +199,7 @@ const teamMembers = {
         role: 'Recluta de Manufactura',
         nickname: 'Compañera',
         image: 'img/EVELYN.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'https://www.linkedin.com/in/evelyne-itzel-marquez-meza-b86171331?utm_source=share_via&utm_content=profile&utm_medium=member_android'
     },
     'Aaron': {
         name: 'Aaron Nériga',
@@ -207,7 +207,7 @@ const teamMembers = {
         role: 'Líder de PowerTrain',
         nickname: 'Aaron',
         image: 'img/AARON.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'https://www.linkedin.com/in/aaron-neriga-01446726a?utm_source=share_via&utm_content=profile&utm_medium=member_ios'
     },
     'JP': {
         name: 'Juan Pablo Hérnandez',
@@ -297,4 +297,31 @@ document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         closeModal();
     }
+});
+// Manejo del formulario de contacto
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  // Obtener datos del formulario
+  const formData = {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    subject: document.getElementById('subject').value,
+    department: document.getElementById('department').value,
+    message: document.getElementById('message').value
+  };
+  
+  // Aquí puedes:
+  // 1. Enviar a un backend
+  // 2. Usar EmailJS
+  // 3. Usar Formspree
+  // 4. Mostrar mensaje de éxito
+  
+  console.log('Datos del formulario:', formData);
+  
+  // Mensaje de éxito (simulado)
+  alert('¡Mensaje enviado con éxito! Te contactaremos pronto.');
+  
+  // Limpiar formulario
+  this.reset();
 });
