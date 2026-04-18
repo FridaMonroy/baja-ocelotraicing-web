@@ -325,3 +325,53 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   // Limpiar formulario
   this.reset();
 });
+
+// Filtrar línea del tiempo por década
+function filterTimeline(decade) {
+  const items = document.querySelectorAll('.timeline-item');
+  const buttons = document.querySelectorAll('.filter-btn');
+  
+  // Actualizar botón activo
+  buttons.forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.getAttribute('onclick').includes(decade)) {
+      btn.classList.add('active');
+    }
+  });
+  
+  // Filtrar items
+  items.forEach(item => {
+    if (decade === 'all' || item.getAttribute('data-decade') === decade) {
+      item.style.display = 'flex';
+      setTimeout(() => {
+        item.style.opacity = '1';
+        item.style.transform = 'translateY(0)';
+      }, 100);
+    } else {
+      item.style.opacity = '0';
+      item.style.transform = 'translateY(30px)';
+      setTimeout(() => {
+        item.style.display = 'none';
+      }, 300);
+    }
+  });
+}
+
+// Animación al hacer scroll
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.animationDelay = `${entry.target.offsetTop * 0.001}s`;
+      entry.target.classList.add('animate');
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.timeline-item').forEach(item => {
+  observer.observe(item);
+});
