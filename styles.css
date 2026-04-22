@@ -911,3 +911,13 @@ html {
     font-size: 0.9rem;
   }
 }
+
+.timeline-img {
+    width: 80%;            /* La imagen ocupa el 80% del espacio */
+    max-width: 350px;      /* No crece más de 350px */
+    height: auto;          /* Mantiene la proporción original */
+    display: block;        /* Necesario para que el margen automático funcione */
+    margin: 0 auto 20px auto; /* Centrado horizontalmente y separación abajo */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
