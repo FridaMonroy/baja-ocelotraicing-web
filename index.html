@@ -323,7 +323,7 @@
   <div class="history-container">
     <h2>NUESTRA HISTORIA</h2>
     <p class="history-subtitle">Más de 20 años de innovación y competencia</p>
-    
+
     <!-- Filtros de década -->
     <div class="timeline-filters">
       <button class="filter-btn active" onclick="filterTimeline('all')">Todos</button>
@@ -332,305 +332,549 @@
       <button class="filter-btn" onclick="filterTimeline('2000')">2000-2009</button>
     </div>
 
-    <!-- Línea del tiempo -->
-    <div class="timeline">
+<!-- 🟢 UN SOLO CONTENEDOR TIMELINE -->
+<div class="timeline">
 
-      <div class="timeline-item" data-decade="2020">
+    <!-- 📅 2025 (Posición IMPAR → Izquierda) -->
+    <div class="timeline-item" data-decade="2020">
         <div class="timeline-marker">2025</div>
-        <div class="timeline-content">
-          <img src="imagen/auto-2025.jpg" class="timeline-img" alt="Baja OCELOTRACING 2025">
-          <h3>Presentación del Vehículo</h3>
-          <div class="achievements">
-            <div class="achievement-card gold">
-              <i class="fas fa-trophy"></i>
-              <span>Top 5 - Presentación de Diseño</span>
+        <div class="timeline-content" onclick="toggleDetails(this)">
+            <div class="main-content">
+                <img src="imagen/auto-2025.jpg" class="timeline-img" alt="Baja OCELOTRACING 2025">
+                <div class="expand-indicator">
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Ver resultados</span>
+                </div>
+                <h3>Presentación del Vehículo</h3>
+                <p class="timeline-desc">Lanzamiento del nuevo prototipo con motor turboalimentado.</p>
             </div>
-          </div>
-          <p class="timeline-desc">Lanzamiento del nuevo prototipo con motor turboalimentado y suspensión independiente.</p>
+            <div class="side-details">
+                <h3 class="season-header">TEMPORADA 2025</h3>
+                <div class="season-line"></div>
+                <div class="season-results">
+                    <div class="competition-col">
+                        <h4>BAJA SAE MERYLAND</h4>
+                        <div class="rank-pill neutral">8TH PLACE OVERALL</div>
+                        <div class="rank-pill top">5TH PLACE DESIGN</div>
+                        <div class="rank-pill top">1ST PLACE ACCELERATION</div>
+                        <div class="rank-pill neutral">6TH PLACE HILL CLIMB</div>
+                    </div>
+                    <div class="competition-col">
+                        <h4>BAJA SAE SAN LUIS POTOSI</h4>
+                        <div class="rank-pill neutral">5TH PLACE OVERALL</div>
+                        <div class="rank-pill top">4TH PLACE DESIGN</div>
+                        <div class="rank-pill top">2ND PLACE ACCELERATION</div>
+                        <div class="rank-pill neutral">8TH PLACE HILL CLIMB</div>
+                    </div>
+                    <div class="competition-col">
+                        <h4>BAJA SAE MICHIGAN</h4>
+                        <div class="rank-pill neutral">7TH PLACE OVERALL</div>
+                        <div class="rank-pill neutral">6TH PLACE DESIGN</div>
+                        <div class="rank-pill top">1ST PLACE ACCELERATION</div>
+                        <div class="rank-pill top">3RD PLACE HILL CLIMB</div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      
-      <!-- Año 2024 -->
-      <div class="timeline-item" data-decade="2020">
-        <div class="timeline-marker">2024</div>
-        <div class="timeline-content">
-          <img src="imagen/auto-2024.jpg" class="timeline-img" alt="Baja OCELOTRACING 2024">
-          <h3>Competencia Internacional</h3>
-          <div class="achievements">
-            <div class="achievement-card gold">
-              <i class="fas fa-trophy"></i>
-              <span>1er Lugar - Diseño de Chasis</span>
-            </div>
-            <div class="achievement-card silver">
-              <i class="fas fa-medal"></i>
-              <span>2do Lugar - Resistencia</span>
-            </div>
-            <div class="achievement-card bronze">
-              <i class="fas fa-award"></i>
-              <span>3er Lugar - Aceleración</span>
-            </div>
-          </div>
-          <p class="timeline-desc">Participación en Baja SAE International con 15 integrantes del equipo.</p>
-        </div>
-      </div>
-      
-      <div class="timeline-item" data-decade="2020">
-        <div class="timeline-marker">2023</div>
-        <div class="timeline-content">
-          <img src="imagen/auto-2023.jpg" class="timeline-img" alt="Baja OCELOTRACING 2023">
-          <h3>Renovación del Vehículo</h3>
-          <div class="achievements">
-            <div class="achievement-card gold">
-              <i class="fas fa-trophy"></i>
-              <span>Top 5 - Presentación de Diseño</span>
-            </div>
-          </div>
-          <p class="timeline-desc">Lanzamiento del nuevo prototipo con motor turboalimentado y suspensión independiente.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item" data-decade="2020">
-        <div class="timeline-marker">2022</div>
-        <div class="timeline-content">
-          <img src="imagen/auto-2022.jpg" class="timeline-img" alt="Baja OCELOTRACING 2022">
-          <h3>Renovación del Vehículo</h3>
-          <div class="achievements">
-            <div class="achievement-card gold">
-              <i class="fas fa-trophy"></i>
-              <span>Top 5 - Presentación de Diseño</span>
-            </div>
-          </div>
-          <p class="timeline-desc">Lanzamiento del nuevo prototipo con motor turboalimentado y suspensión independiente.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item" data-decade="2020">
-        <div class="timeline-marker">2021</div>
-        <div class="timeline-content">
-          <img src="imagen/auto-2021.jpg" class="timeline-img" alt="Baja OCELOTRACING 2021">
-          <h3>Renovación del Vehículo</h3>
-          <div class="achievements">
-            <div class="achievement-card gold">
-              <i class="fas fa-trophy"></i>
-              <span>Top 5 - Presentación de Diseño</span>
-            </div>
-          </div>
-          <p class="timeline-desc">Lanzamiento del nuevo prototipo con motor turboalimentado y suspensión independiente.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item" data-decade="2020">
-        <div class="timeline-marker">2020</div>
-        <div class="timeline-content">
-          <img src="imagen/auto-2020.jpg" class="timeline-img" alt="Baja OCELOTRACING 2020">
-          <h3>Renovación del Vehículo</h3>
-          <div class="achievements">
-            <div class="achievement-card gold">
-              <i class="fas fa-trophy"></i>
-              <span>Top 5 - Presentación de Diseño</span>
-            </div>
-          </div>
-          <p class="timeline-desc">Lanzamiento del nuevo prototipo con motor turboalimentado y suspensión independiente.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item" data-decade="2010">
-        <div class="timeline-marker">2019</div>
-        <div class="timeline-content">
-          <img src="imagen/auto-2019.jpg" class="timeline-img" alt="Baja OCELOTRACING 2019">
-          <h3>Renovación del Vehículo</h3>
-          <div class="achievements">
-            <div class="achievement-card gold">
-              <i class="fas fa-trophy"></i>
-              <span>Top 5 - Presentación de Diseño</span>
-            </div>
-          </div>
-          <p class="timeline-desc">Lanzamiento del nuevo prototipo con motor turboalimentado y suspensión independiente.</p>
-        </div>
-      </div>
-
-      <!-- Año 2023 -->
-      <div class="timeline-item" data-decade="2010">
-        <div class="timeline-marker">2017</div>
-        <div class="timeline-content">
-          <img src="imagen/auto-2017.jpg" class="timeline-img" alt="Baja OCELOTRACING 2017">
-          <h3>Renovación del Vehículo</h3>
-          <div class="achievements">
-            <div class="achievement-card gold">
-              <i class="fas fa-trophy"></i>
-              <span>Top 5 - Presentación de Diseño</span>
-            </div>
-          </div>
-          <p class="timeline-desc">Lanzamiento del nuevo prototipo con motor turboalimentado y suspensión independiente.</p>
-        </div>
-      </div>
-
-      <!-- Año 2022 -->
-      <div class="timeline-item" data-decade="2010">
-        <div class="timeline-marker">2016</div>
-        <div class="timeline-content">
-          <img src="imagen/auto-2016.jpg" class="timeline-img" alt="Baja OCELOTRACING 2016">
-          <h3>Regreso a Competencias</h3>
-          <div class="achievements">
-            <div class="achievement-card bronze">
-              <i class="fas fa-award"></i>
-              <span>3er Lugar - Categoría Estudiantil</span>
-            </div>
-          </div>
-          <p class="timeline-desc">Primera competencia post-pandemia con 12 nuevos integrantes.</p>
-        </div>
-      </div>
-
-      <!-- Año 2020-2021 -->
-      <div class="timeline-item" data-decade="2010">
-        <div class="timeline-marker">2015</div>
-        <div class="timeline-content">
-          <img src="imagen/auto-2015.jpg" class="timeline-img" alt="Baja OCELOTRACING 2015">
-          <h3>Competencia Virtual</h3>
-          <div class="achievements">
-            <div class="achievement-card special">
-              <i class="fas fa-laptop"></i>
-              <span>Top 10 - Presentación Virtual</span>
-            </div>
-          </div>
-          <p class="timeline-desc">Adaptación a formato virtual por pandemia. Diseño remoto y simulaciones avanzadas.</p>
-        </div>
-      </div>
-
-      <!-- Año 2019 -->
-      <div class="timeline-item" data-decade="2010">
-        <div class="timeline-marker">2013</div>
-        <div class="timeline-content">
-          <img src="imagen/auto-2013.jpg" class="timeline-img" alt="Baja OCELOTRACING 2013">
-          <h3>Excelencia en Diseño</h3>
-          <div class="achievements">
-            <div class="achievement-card gold">
-              <i class="fas fa-trophy"></i>
-              <span>1er Lugar - Mejor Diseño de Suspensión</span>
-            </div>
-            <div class="achievement-card silver">
-              <i class="fas fa-medal"></i>
-              <span>2do Lugar - General</span>
-            </div>
-          </div>
-          <p class="timeline-desc">Récord de velocidad en aceleración: 4.2 segundos de 0-100m.</p>
-        </div>
-      </div>
-
-      <!-- Año 2018 -->
-      <div class="timeline-item" data-decade="2010">
-        <div class="timeline-marker">2012</div>
-        <div class="timeline-content">
-          <img src="imagen/auto-2012.jpg" class="timeline-img" alt="Baja OCELOTRACING 2012">
-          <h3>Consolidación del Equipo</h3>
-          <div class="achievements">
-            <div class="achievement-card bronze">
-              <i class="fas fa-award"></i>
-              <span>3er Lugar - Resistencia 4 horas</span>
-            </div>
-          </div>
-          <p class="timeline-desc">Expansión a 20 integrantes y nuevas instalaciones en el taller.</p>
-        </div>
-      </div>
-
-      <!-- Año 2015 -->
-      <div class="timeline-item" data-decade="2010">
-        <div class="timeline-marker">2011</div>
-        <div class="timeline-content">
-          <img src="imagen/auto-2011.jpg" class="timeline-img" alt="Baja OCELOTRACING 2011">
-          <h3>Primera Competencia Internacional</h3>
-          <div class="achievements">
-            <div class="achievement-card special">
-              <i class="fas fa-globe"></i>
-              <span>Participación - Baja SAE USA</span>
-            </div>
-          </div>
-          <p class="timeline-desc">Primera vez compitiendo a nivel internacional en Oregon, USA.</p>
-        </div>
-      </div>
-
-      <!-- Año 2012 -->
-      <div class="timeline-item" data-decade="2000">
-        <div class="timeline-marker">2006</div>
-        <div class="timeline-content">
-          <img src="imagen/auto-2006.jpg" class="timeline-img" alt="Baja OCELOTRACING 2006">
-          <h3>Innovación Tecnológica</h3>
-          <div class="achievements">
-            <div class="achievement-card gold">
-              <i class="fas fa-trophy"></i>
-              <span>1er Lugar - Innovación en Frenos</span>
-            </div>
-          </div>
-          <p class="timeline-desc">Implementación de frenos de disco ventilados y sistema de telemetría.</p>
-        </div>
-      </div>
-
-      <!-- Año 2010 -->
-      <div class="timeline-item" data-decade="2000">
-        <div class="timeline-marker">2005</div>
-        <div class="timeline-content">
-          <img src="imagen/auto-2005.jpg" class="timeline-img" alt="Baja OCELOTRACING 2005">
-          <h3>Década de Oro</h3>
-          <div class="achievements">
-            <div class="achievement-card silver">
-              <i class="fas fa-medal"></i>
-              <span>2do Lugar - Competencia Nacional</span>
-            </div>
-          </div>
-          <p class="timeline-desc">Inicio de la década con 14 integrantes y primer patrocinio importante.</p>
-        </div>
-      </div>
-
-      <!-- Año 2008 -->
-      <div class="timeline-item" data-decade="2000">
-        <div class="timeline-marker">2004</div>
-        <div class="timeline-content">
-          <img src="imagen/auto-2004.png" class="timeline-img" alt="Baja OCELOTRACING 2004">
-          <h3>Crecimiento del Programa</h3>
-          <div class="achievements">
-            <div class="achievement-card bronze">
-              <i class="fas fa-award"></i>
-              <span>Top 5 - Competencia Regional</span>
-            </div>
-          </div>
-          <p class="timeline-desc">Expansión del equipo a 17 integrantes y mejora de instalaciones.</p>
-        </div>
-      </div>
-
-      <!-- Año 2005 -->
-      <div class="timeline-item" data-decade="2000">
-        <div class="timeline-marker">2003</div>
-        <div class="timeline-content">
-          <img src="imagen/auto-2003.jpg" class="timeline-img" alt="Baja OCELOTRACING 2003">
-          <h3>Primeros Logros</h3>
-          <div class="achievements">
-            <div class="achievement-card special">
-              <i class="fas fa-star"></i>
-              <span>Primera Competencia Formal</span>
-            </div>
-          </div>
-          <p class="timeline-desc">Primera participación oficial en competencia universitaria.</p>
-        </div>
-      </div>
-
-      <!-- Año 2000 -->
-      <div class="timeline-item" data-decade="2000">
-        <div class="timeline-marker">2002</div>
-        <div class="timeline-content">
-          <img src="imagen/auto-2002.jpg" class="timeline-img" alt="Baja OCELOTRACING 2002">
-          <h3>Los Inicios</h3>
-          <div class="achievements">
-            <div class="achievement-card special">
-              <i class="fas fa-flag"></i>
-              <span>Fundación del Equipo</span>
-            </div>
-          </div>
-          <p class="timeline-desc">Nace la escudería con 12 estudiantes visionarios y un sueño: competir a nivel internacional.</p>
-        </div>
-      </div>
-
     </div>
-  </div>
+
+    <!-- 📅 2024 (Posición PAR → Derecha) -->
+    <div class="timeline-item" data-decade="2020">
+        <div class="timeline-marker">2024</div>
+        <div class="timeline-content" onclick="toggleDetails(this)">
+            <div class="main-content">
+                <img src="imagen/auto-2024.jpg" class="timeline-img" alt="Baja OCELOTRACING 2024">
+                <div class="expand-indicator">
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Ver resultados</span>
+                </div>
+                <h3>Presentación del Vehículo</h3>
+                <p class="timeline-desc">Lanzamiento del nuevo prototipo con motor turboalimentado.</p>
+            </div>
+            <div class="side-details">
+                <h3 class="season-header">TEMPORADA 2024</h3>
+                <div class="season-line"></div>
+                <div class="season-results">
+                    <div class="competition-col">
+                        <h4>BAJA SAE MERYLAND</h4>
+                        <div class="rank-pill neutral">8TH PLACE OVERALL</div>
+                        <div class="rank-pill top">5TH PLACE DESIGN</div>
+                        <div class="rank-pill top">1ST PLACE ACCELERATION</div>
+                        <div class="rank-pill neutral">6TH PLACE HILL CLIMB</div>
+                    </div>
+                    <div class="competition-col">
+                        <h4>BAJA SAE SAN LUIS POTOSI</h4>
+                        <div class="rank-pill neutral">5TH PLACE OVERALL</div>
+                        <div class="rank-pill top">4TH PLACE DESIGN</div>
+                        <div class="rank-pill top">2ND PLACE ACCELERATION</div>
+                        <div class="rank-pill neutral">8TH PLACE HILL CLIMB</div>
+                    </div>
+                    <div class="competition-col">
+                        <h4>BAJA SAE MICHIGAN</h4>
+                        <div class="rank-pill neutral">7TH PLACE OVERALL</div>
+                        <div class="rank-pill neutral">6TH PLACE DESIGN</div>
+                        <div class="rank-pill top">1ST PLACE ACCELERATION</div>
+                        <div class="rank-pill top">3RD PLACE HILL CLIMB</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 📅 2023 (Posición IMPAR → Izquierda) -->
+    <div class="timeline-item" data-decade="2020">
+        <div class="timeline-marker">2023</div>
+        <div class="timeline-content" onclick="toggleDetails(this)">
+            <div class="main-content">
+                <img src="imagen/auto-2023.jpg" class="timeline-img" alt="Baja OCELOTRACING 2023">
+                <div class="expand-indicator">
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Ver resultados</span>
+                </div>
+                <h3>BICAMPEONES BAJA SAE MÉXICO</h3>
+                <p class="timeline-desc">Lanzamiento del nuevo prototipo con motor turboalimentado y suspensión independiente</p>
+            </div>
+            <div class="side-details">
+                <h3 class="season-header">TEMPORADA 2023</h3>
+                <div class="season-line"></div>
+                <div class="season-results">
+                    <div class="competition-col">
+                        <h4>BAJA SAE TOLUCA</h4>
+                        <div class="rank-pill neutral">8TH PLACE OVERALL</div>
+                        <div class="rank-pill top">1ER LUGAR EN PISCINA DE LODO</div>
+                        <div class="rank-pill top">1ER OVERALL EN PRUEBAS ESTATICAS</div>
+                        <div class="rank-pill neutral">6TH PLACE HILL CLIMB</div>
+                    </div>
+                    <div class="competition-col">
+                        <h4>BAJA SAE SAN LUIS POTOSI</h4>
+                        <div class="rank-pill neutral">5TH PLACE OVERALL</div>
+                        <div class="rank-pill top">4TH PLACE DESIGN</div>
+                        <div class="rank-pill top">2ND PLACE ACCELERATION</div>
+                        <div class="rank-pill neutral">8TH PLACE HILL CLIMB</div>
+                    </div>
+                    <div class="competition-col">
+                        <h4>BAJA SAE MICHIGAN</h4>
+                        <div class="rank-pill neutral">7TH PLACE OVERALL</div>
+                        <div class="rank-pill neutral">6TH PLACE DESIGN</div>
+                        <div class="rank-pill top">1ST PLACE ACCELERATION</div>
+                        <div class="rank-pill top">3RD PLACE HILL CLIMB</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- AÑO 2019 (Se colocará a la DERECHA automáticamente) -->
+<div class="timeline-item" data-decade="2010">
+    <div class="timeline-marker">2019</div>
+    <div class="timeline-content" onclick="toggleDetails(this)">
+        <div class="main-content">
+            <img src="imagen/auto-2019.jpg" class="timeline-img" alt="Baja OCELOTRACING 2019">
+            <div class="expand-indicator">
+                <i class="fas fa-chevron-right"></i>
+                <span>Ver resultados</span>
+            </div>
+            <h3>Renovación del Vehículo</h3>
+            <p class="timeline-desc">Lanzamiento del nuevo prototipo con motor turboalimentado y suspensión independiente.</p>
+        </div>
+        <div class="side-details">
+            <h3 class="season-header">TEMPORADA 2019</h3>
+            <div class="season-line"></div>
+            <div class="season-results">
+                <div class="competition-col">
+                    <h4>COMPETENCIA 1</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                    <div class="rank-pill top">[LOGRO DESTACADO]</div>
+                </div>
+                <div class="competition-col">
+                    <h4>COMPETENCIA 2</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                    <div class="rank-pill top">[LOGRO DESTACADO]</div>
+                </div>
+                <div class="competition-col">
+                    <h4>COMPETENCIA 3</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                    <div class="rank-pill top">[LOGRO DESTACADO]</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- AÑO 2017 (Se colocará a la IZQUIERDA automáticamente) -->
+<div class="timeline-item" data-decade="2010">
+    <div class="timeline-marker">2017</div>
+    <div class="timeline-content" onclick="toggleDetails(this)">
+        <div class="main-content">
+            <img src="imagen/auto-2017.jpg" class="timeline-img" alt="Baja OCELOTRACING 2017">
+            <div class="expand-indicator">
+                <i class="fas fa-chevron-right"></i>
+                <span>Ver resultados</span>
+            </div>
+            <h3>Renovación del Vehículo</h3>
+            <p class="timeline-desc">Lanzamiento del nuevo prototipo con motor turboalimentado y suspensión independiente.</p>
+        </div>
+        <div class="side-details">
+            <h3 class="season-header">TEMPORADA 2017</h3>
+            <div class="season-line"></div>
+            <div class="season-results">
+                <div class="competition-col">
+                    <h4>COMPETENCIA 1</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+                <div class="competition-col">
+                    <h4>COMPETENCIA 2</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+                <div class="competition-col">
+                    <h4>COMPETENCIA 3</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- AÑO 2016 -->
+<div class="timeline-item" data-decade="2010">
+    <div class="timeline-marker">2016</div>
+    <div class="timeline-content" onclick="toggleDetails(this)">
+        <div class="main-content">
+            <img src="imagen/auto-2016.jpg" class="timeline-img" alt="Baja OCELOTRACING 2016">
+            <div class="expand-indicator">
+                <i class="fas fa-chevron-right"></i>
+                <span>Ver resultados</span>
+            </div>
+            <h3>Regreso a Competencias</h3>
+            <p class="timeline-desc">Primera competencia post-pandemia con 12 nuevos integrantes.</p>
+        </div>
+        <div class="side-details">
+            <h3 class="season-header">TEMPORADA 2016</h3>
+            <div class="season-line"></div>
+            <div class="season-results">
+                <div class="competition-col">
+                    <h4>COMPETENCIA 1</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+                <div class="competition-col">
+                    <h4>COMPETENCIA 2</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+                <div class="competition-col">
+                    <h4>COMPETENCIA 3</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- AÑO 2015 -->
+<div class="timeline-item" data-decade="2010">
+    <div class="timeline-marker">2015</div>
+    <div class="timeline-content" onclick="toggleDetails(this)">
+        <div class="main-content">
+            <img src="imagen/auto-2015.jpg" class="timeline-img" alt="Baja OCELOTRACING 2015">
+            <div class="expand-indicator">
+                <i class="fas fa-chevron-right"></i>
+                <span>Ver resultados</span>
+            </div>
+            <h3>Competencia Virtual</h3>
+            <p class="timeline-desc">Adaptación a formato virtual por pandemia. Diseño remoto y simulaciones avanzadas.</p>
+        </div>
+        <div class="side-details">
+            <h3 class="season-header">TEMPORADA 2015</h3>
+            <div class="season-line"></div>
+            <div class="season-results">
+                <div class="competition-col">
+                    <h4>COMPETENCIA 1</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+                <div class="competition-col">
+                    <h4>COMPETENCIA 2</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+                <div class="competition-col">
+                    <h4>COMPETENCIA 3</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- AÑO 2013 -->
+<div class="timeline-item" data-decade="2010">
+    <div class="timeline-marker">2013</div>
+    <div class="timeline-content" onclick="toggleDetails(this)">
+        <div class="main-content">
+            <img src="imagen/auto-2013.jpg" class="timeline-img" alt="Baja OCELOTRACING 2013">
+            <div class="expand-indicator">
+                <i class="fas fa-chevron-right"></i>
+                <span>Ver resultados</span>
+            </div>
+            <h3>Excelencia en Diseño</h3>
+            <p class="timeline-desc">Récord de velocidad en aceleración: 4.2 segundos de 0-100m.</p>
+        </div>
+        <div class="side-details">
+            <h3 class="season-header">TEMPORADA 2013</h3>
+            <div class="season-line"></div>
+            <div class="season-results">
+                <div class="competition-col">
+                    <h4>COMPETENCIA 1</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+                <div class="competition-col">
+                    <h4>COMPETENCIA 2</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+                <div class="competition-col">
+                    <h4>COMPETENCIA 3</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- AÑO 2012 -->
+<div class="timeline-item" data-decade="2010">
+    <div class="timeline-marker">2012</div>
+    <div class="timeline-content" onclick="toggleDetails(this)">
+        <div class="main-content">
+            <img src="imagen/auto-2012.jpg" class="timeline-img" alt="Baja OCELOTRACING 2012">
+            <div class="expand-indicator">
+                <i class="fas fa-chevron-right"></i>
+                <span>Ver resultados</span>
+            </div>
+            <h3>Consolidación del Equipo</h3>
+            <p class="timeline-desc">Expansión a 20 integrantes y nuevas instalaciones en el taller.</p>
+        </div>
+        <div class="side-details">
+            <h3 class="season-header">TEMPORADA 2012</h3>
+            <div class="season-line"></div>
+            <div class="season-results">
+                <div class="competition-col">
+                    <h4>COMPETENCIA 1</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+                <div class="competition-col">
+                    <h4>COMPETENCIA 2</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+                <div class="competition-col">
+                    <h4>COMPETENCIA 3</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- AÑO 2011 -->
+<div class="timeline-item" data-decade="2010">
+    <div class="timeline-marker">2011</div>
+    <div class="timeline-content" onclick="toggleDetails(this)">
+        <div class="main-content">
+            <img src="imagen/auto-2011.jpg" class="timeline-img" alt="Baja OCELOTRACING 2011">
+            <div class="expand-indicator">
+                <i class="fas fa-chevron-right"></i>
+                <span>Ver resultados</span>
+            </div>
+            <h3>Primera Competencia Internacional</h3>
+            <p class="timeline-desc">Primera vez compitiendo a nivel internacional en Oregon, USA.</p>
+        </div>
+        <div class="side-details">
+            <h3 class="season-header">TEMPORADA 2011</h3>
+            <div class="season-line"></div>
+            <div class="season-results">
+                <div class="competition-col">
+                    <h4>COMPETENCIA 1</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+                <div class="competition-col">
+                    <h4>COMPETENCIA 2</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+                <div class="competition-col">
+                    <h4>COMPETENCIA 3</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- AÑO 2006 -->
+<div class="timeline-item" data-decade="2000">
+    <div class="timeline-marker">2006</div>
+    <div class="timeline-content" onclick="toggleDetails(this)">
+        <div class="main-content">
+            <img src="imagen/auto-2006.jpg" class="timeline-img" alt="Baja OCELOTRACING 2006">
+            <div class="expand-indicator">
+                <i class="fas fa-chevron-right"></i>
+                <span>Ver resultados</span>
+            </div>
+            <h3>Innovación Tecnológica</h3>
+            <p class="timeline-desc">Implementación de frenos de disco ventilados y sistema de telemetría.</p>
+        </div>
+        <div class="side-details">
+            <h3 class="season-header">TEMPORADA 2006</h3>
+            <div class="season-line"></div>
+            <div class="season-results">
+                <div class="competition-col">
+                    <h4>COMPETENCIA 1</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+                <div class="competition-col">
+                    <h4>COMPETENCIA 2</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+                <div class="competition-col">
+                    <h4>COMPETENCIA 3</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- AÑO 2005 -->
+<div class="timeline-item" data-decade="2000">
+    <div class="timeline-marker">2005</div>
+    <div class="timeline-content" onclick="toggleDetails(this)">
+        <div class="main-content">
+            <img src="imagen/auto-2005.jpg" class="timeline-img" alt="Baja OCELOTRACING 2005">
+            <div class="expand-indicator">
+                <i class="fas fa-chevron-right"></i>
+                <span>Ver resultados</span>
+            </div>
+            <h3>Década de Oro</h3>
+            <p class="timeline-desc">Inicio de la década con 14 integrantes y primer patrocinio importante.</p>
+        </div>
+        <div class="side-details">
+            <h3 class="season-header">TEMPORADA 2005</h3>
+            <div class="season-line"></div>
+            <div class="season-results">
+                <div class="competition-col">
+                    <h4>COMPETENCIA 1</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+                <div class="competition-col">
+                    <h4>COMPETENCIA 2</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+                <div class="competition-col">
+                    <h4>COMPETENCIA 3</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- AÑO 2004 -->
+<div class="timeline-item" data-decade="2000">
+    <div class="timeline-marker">2004</div>
+    <div class="timeline-content" onclick="toggleDetails(this)">
+        <div class="main-content">
+            <img src="imagen/auto-2004.png" class="timeline-img" alt="Baja OCELOTRACING 2004">
+            <div class="expand-indicator">
+                <i class="fas fa-chevron-right"></i>
+                <span>Ver resultados</span>
+            </div>
+            <h3>Crecimiento del Programa</h3>
+            <p class="timeline-desc">Expansión del equipo a 17 integrantes y mejora de instalaciones.</p>
+        </div>
+        <div class="side-details">
+            <h3 class="season-header">TEMPORADA 2004</h3>
+            <div class="season-line"></div>
+            <div class="season-results">
+                <div class="competition-col">
+                    <h4>COMPETENCIA 1</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+                <div class="competition-col">
+                    <h4>COMPETENCIA 2</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+                <div class="competition-col">
+                    <h4>COMPETENCIA 3</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- AÑO 2003 -->
+<div class="timeline-item" data-decade="2000">
+    <div class="timeline-marker">2003</div>
+    <div class="timeline-content" onclick="toggleDetails(this)">
+        <div class="main-content">
+            <img src="imagen/auto-2003.jpg" class="timeline-img" alt="Baja OCELOTRACING 2003">
+            <div class="expand-indicator">
+                <i class="fas fa-chevron-right"></i>
+                <span>Ver resultados</span>
+            </div>
+            <h3>Primeros Logros</h3>
+            <p class="timeline-desc">Primera participación oficial en competencia universitaria.</p>
+        </div>
+        <div class="side-details">
+            <h3 class="season-header">TEMPORADA 2003</h3>
+            <div class="season-line"></div>
+            <div class="season-results">
+                <div class="competition-col">
+                    <h4>COMPETENCIA 1</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+                <div class="competition-col">
+                    <h4>COMPETENCIA 2</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+                <div class="competition-col">
+                    <h4>COMPETENCIA 3</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- AÑO 2002 -->
+<div class="timeline-item" data-decade="2000">
+    <div class="timeline-marker">2002</div>
+    <div class="timeline-content" onclick="toggleDetails(this)">
+        <div class="main-content">
+            <img src="imagen/auto-2002.jpg" class="timeline-img" alt="Baja OCELOTRACING 2002">
+            <div class="expand-indicator">
+                <i class="fas fa-chevron-right"></i>
+                <span>Ver resultados</span>
+            </div>
+            <h3>Los Inicios</h3>
+            <p class="timeline-desc">Nace la escudería con 12 estudiantes visionarios y un sueño: competir a nivel internacional.</p>
+        </div>
+        <div class="side-details">
+            <h3 class="season-header">TEMPORADA 2002</h3>
+            <div class="season-line"></div>
+            <div class="season-results">
+                <div class="competition-col">
+                    <h4>COMPETENCIA 1</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+                <div class="competition-col">
+                    <h4>COMPETENCIA 2</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+                <div class="competition-col">
+                    <h4>COMPETENCIA 3</h4>
+                    <div class="rank-pill neutral">[RESULTADO GENERAL]</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div> <!-- 🔚 FIN DEL CONTENEDOR TIMELINE -->
 </section>
 
 <!-- SECCIÓN DE CONTACTO -->
@@ -660,9 +904,7 @@
             <p>CDMX</p>
           </div>
         </div>
-
-
-
+      
         <!-- Redes Sociales -->
         <div class="social-links">
           <h4>Síguenos</h4>
@@ -675,6 +917,12 @@
             </a>
             <a href="https://mx.linkedin.com/company/escuderia-ocelot-racing" target="_blank" class="social-icon">
               <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://wa.me/5215562311787" target="_blank" class="social-icon">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.tiktok.com/@ocelotracing?_r=1&_t=ZS-95lT8Q5Cm8m" target="_blank" class="social-icon">
+              <i class="fab fa-tiktok"></i>
             </a>
           </div>
         </div>

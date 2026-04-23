@@ -375,3 +375,68 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.timeline-item').forEach(item => {
   observer.observe(item);
 });
+// Función para mostrar/ocultar detalles
+function toggleDetails(element) {
+    // Evitar que se cierre si se hace clic en un enlace o botón
+    if (event.target.closest('a') || event.target.closest('button')) {
+        return;
+    }
+    
+    // Toggle de la clase expanded
+    element.classList.toggle('expanded');
+    
+    // Opcional: Cerrar otros items abiertos
+    const allContents = document.querySelectorAll('.timeline-content');
+    allContents.forEach(content => {
+        if (content !== element && content.classList.contains('expanded')) {
+            content.classList.remove('expanded');
+        }
+    });
+}
+
+// Opcional: Cerrar al hacer clic fuera
+document.addEventListener('click', function(event) {
+    const timelineContents = document.querySelectorAll('.timeline-content');
+    let clickedInside = false;
+    
+    timelineContents.forEach(content => {
+        if (content.contains(event.target)) {
+            clickedInside = true;
+        }
+    });
+    
+    if (!clickedInside) {
+        timelineContents.forEach(content => {
+            content.classList.remove('expanded');
+        });
+    }
+});
+function toggleDetails(element) {
+    if (event.target.closest('a') || event.target.closest('button')) {
+        return;
+    }
+    
+    element.classList.toggle('expanded');
+    
+    // Opcional: Cerrar otros items
+    const allContents = document.querySelectorAll('.timeline-content');
+    allContents.forEach(content => {
+        if (content !== element && content.classList.contains('expanded')) {
+            content.classList.remove('expanded');
+        }
+    });
+}
+function toggleCard(element) {
+  // Verificar si ya está activo
+  const isActive = element.classList.contains('active');
+
+  // Cerrar todas las tarjetas abiertas (opcional, para mantenerlo limpio)
+  document.querySelectorAll('.timeline-card.active').forEach(card => {
+    card.classList.remove('active');
+  });
+
+  // Si no estaba activa, abrirla
+  if (!isActive) {
+    element.classList.add('active');
+  }
+}
