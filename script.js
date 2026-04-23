@@ -440,3 +440,38 @@ function toggleCard(element) {
     element.classList.add('active');
   }
 }
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+const navLinks = document.querySelectorAll('#nav-menu a');
+
+function toggleMenu() {
+    menuToggle.classList.toggle('active');
+    navMenu.classList.toggle('active');
+    // Evita que la página haga scroll mientras el menú está abierto
+    document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
+}
+
+// 1️⃣ Abrir/Cerrar al tocar la hamburguesa
+menuToggle.addEventListener('click', (e) => {
+    e.stopPropagation(); // Evita que el clic se propague y cierre inmediatamente
+    toggleMenu();
+});
+
+// 2️⃣ Cerrar al tocar un enlace
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (navMenu.classList.contains('active')) toggleMenu();
+    });
+});
+
+// 3️⃣ Cerrar al tocar FUERA del menú
+document.addEventListener('click', (e) => {
+    if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+        toggleMenu();
+    }
+});
+
+// 4️⃣ Cerrar con tecla ESC
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navMenu.classList.contains('active')) toggleMenu();
+});

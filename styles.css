@@ -1389,3 +1389,102 @@ html {
         padding: 8px 15px;
     }
 }
+/* Importar fuente Montserrat (Pon esto al inicio de tu CSS o en el head del HTML) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&display=swap');
+
+/* Contenedor del Logo */
+.logo-container {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alineado a la izquierda */
+    line-height: 1; /* Evita espacios extra entre líneas */
+    
+}
+
+/* Grupo Ocelot + Racing */
+.logo-text-group {
+    display: flex;
+    align-items: baseline; /* Alinea la base de las letras */
+    gap: 8px; /* Espacio entre Ocelot y Racing */
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Estilo "Ocelot" (Grueso y Blanco para fondo oscuro) */
+.text-ocelot {
+    font-weight: 400; /* Extra bold */
+    font-size: 2.5rem;
+    color: #ffffff; 
+    letter-spacing: -1px; /* Letras un poco más juntas */
+}
+
+/* Estilo "RACING" (Fino y Verde) */
+.text-racing {
+    font-weight: 300; /* Light */
+    font-size: 1.2rem;
+    color: #50C878; /* Tu verde esmeralda */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Estilo "ESCUDERÍA" (Cápsula negra) */
+.text-escuderia {
+    background-color: #ffffff; /* Fondo blanco como en tu imagen */
+    color: #000000; /* Texto negro */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 0.5rem;
+    letter-spacing: 3px; /* Muy espaciado */
+    padding: 3px 12px;
+    border-radius: 20px; /* Bordes redondos */
+    margin-top: 2px; /* Pegado a Ocelot */
+    margin-left: 2px; /* Pequeña alineación visual */
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .text-ocelot { font-size: 1.8rem; }
+    .text-racing { font-size: 0.9rem; }
+}
+body {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+/* 🚫 Elimina cualquier línea/subrayado en el logo */
+.logo-container,
+.logo-container:hover,
+.logo-container:focus,
+.logo-container:active {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+/* Si la línea verde la genera un pseudo-elemento (::after) */
+.logo-container::after,
+.logo-container:hover::after {
+    display: none !important;
+    content: none;
+    border-bottom: none;
+    background: none;
+}
+/* 1. Por defecto, el marcador está encima de la línea */
+.timeline-marker {
+    z-index: 10; /* Nivel base */
+    position: relative; /* Asegura que respete el z-index */
+    transition: all 0.4s ease; /* Suaviza cualquier cambio */
+}
+
+/* 2. Cuando la tarjeta se expande, se pone POR ENCIMA del marcador */
+.timeline-content.expanded {
+    z-index: 20; /* Más alto que el marcador para cubrirlo */
+    /* Opcional: Si quieres que el marcador se mueva físicamente */
+}
+
+/* Efecto extra: El marcador se desvanece un poco al abrir */
+.timeline-content.expanded ~ .timeline-marker {
+    opacity: 0.5; 
+    transform: scale(0.9); /* Se hace un poco más pequeño para dar profundidad */
+}
