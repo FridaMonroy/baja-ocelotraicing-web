@@ -1379,14 +1379,17 @@ html {
 
 @media (max-width: 768px) {
     .timeline::before {
-        left: 30px;
+        width: 3px; /* 👈 Delgada */
+        background: linear-gradient(180deg, #50C878, #2d5a3d);
+        left: 25px; /* Alineada al borde izquierdo en móvil */
     }
     
     .timeline-marker {
-        left: 30px;
-        transform: translateX(-50%);
-        font-size: 0.9rem;
-        padding: 8px 15px;
+        left: 25px;
+        padding: 6px 10px;
+        font-size: 0.8rem;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(80, 200, 120, 0.4);
     }
 }
 /* Importar fuente Montserrat (Pon esto al inicio de tu CSS o en el head del HTML) */
@@ -1487,4 +1490,57 @@ body {
 .timeline-content.expanded ~ .timeline-marker {
     opacity: 0.5; 
     transform: scale(0.9); /* Se hace un poco más pequeño para dar profundidad */
+}
+/* === ESCRITORIO (Mantiene menú visible) === */
+#nav-menu {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.menu-toggle { display: none; }
+
+/* === MÓVIL (Menú oculto a la derecha) === */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        font-size: 1.8rem;
+        color: #fff;
+        cursor: pointer;
+        user-select: none;
+        padding: 5px;
+        transition: transform 0.3s;
+    }
+
+    #nav-menu {
+        display: flex; /* 👈 IMPORTANTE: nunca uses display:none aquí */
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 75%;
+        max-width: 280px;
+        height: 100vh;
+        background: #0a0a0a;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transform: translateX(100%); /* 👈 Oculto fuera de pantalla */
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1001;
+        padding-top: 60px;
+    }
+
+    /* 👈 Cuando tiene .active, se desliza adentro */
+    #nav-menu.active {
+        transform: translateX(0);
+    }
+
+    #nav-menu a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+        padding: 10px 20px;
+        transition: color 0.3s;
+    }
 }

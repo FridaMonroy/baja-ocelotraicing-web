@@ -90,7 +90,7 @@ const teamMembers = {
     },
     'Lalo': {
         name: 'Eduardo Olvera',
-        major: 'ISISA',
+        major: 'Ingeniería en Sistemas Automotrices',
         role: 'Recluta de Chasís',
         nickname: 'Lalote',
         image: 'img/LALOTE.jpeg',
@@ -203,7 +203,7 @@ const teamMembers = {
     },
     'Aaron': {
         name: 'Aaron Nériga',
-        major: 'ISISA',
+        major: 'Ingenieria en Sistemas Automotrices',
         role: 'Líder de PowerTrain',
         nickname: 'Aaron',
         image: 'img/AARON.jpeg',
@@ -440,38 +440,44 @@ function toggleCard(element) {
     element.classList.add('active');
   }
 }
-const menuToggle = document.getElementById('menu-toggle');
-const navMenu = document.getElementById('nav-menu');
-const navLinks = document.querySelectorAll('#nav-menu a');
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
 
-function toggleMenu() {
-    menuToggle.classList.toggle('active');
-    navMenu.classList.toggle('active');
-    // Evita que la página haga scroll mientras el menú está abierto
-    document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
-}
-
-// 1️⃣ Abrir/Cerrar al tocar la hamburguesa
-menuToggle.addEventListener('click', (e) => {
-    e.stopPropagation(); // Evita que el clic se propague y cierre inmediatamente
-    toggleMenu();
-});
-
-// 2️⃣ Cerrar al tocar un enlace
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        if (navMenu.classList.contains('active')) toggleMenu();
-    });
-});
-
-// 3️⃣ Cerrar al tocar FUERA del menú
-document.addEventListener('click', (e) => {
-    if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-        toggleMenu();
+    if (!menuBtn || !navMenu) {
+        console.error('❌ Error: No se encontró el botón o el menú. Revisa los IDs en el HTML.');
+        return;
     }
-});
 
-// 4️⃣ Cerrar con tecla ESC
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && navMenu.classList.contains('active')) toggleMenu();
+    // Abrir/Cerrar menú
+    menuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navMenu.classList.toggle('active');
+        // Cambia el ícono a X cuando está abierto
+        menuBtn.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+    });
+
+    // Cerrar al tocar un enlace
+    navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            menuBtn.textContent = '☰';
+        });
+    });
+
+    // Cerrar al tocar fuera
+    document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+            navMenu.classList.remove('active');
+            menuBtn.textContent = '☰';
+        }
+    });
+
+    // Cerrar con tecla ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            menuBtn.textContent = '☰';
+        }
+    });
 });
