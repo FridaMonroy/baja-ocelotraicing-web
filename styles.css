@@ -203,13 +203,40 @@ nav a {
 .navbar a:hover::after {
     width: 100%;
 }
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+    background: #111;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
 /* MENÚ HAMBURGUESA (oculto en PC) */
 .menu-toggle {
     display: none;
-    font-size: 25px;
+    font-size: 2rem;
     color: white;
     cursor: pointer;
+    user-select: none;
+    z-index: 1002;
+}
+#nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+#nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+#nav-menu a:hover {
+    color: #50C878;
 }
 
 @media (max-width: 768px) {
@@ -219,23 +246,28 @@ nav a {
     }
 
     #nav-menu {
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: black;
-        width: 200px;
-        display: none;
+        position: fixed;
+        top: 0;
+        right: -300px; /* 👈 Fuera de pantalla */
+        width: 250px;
+        height: 100vh;
+        background: #000;
         flex-direction: column;
-        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transition: right 0.3s ease; /* 👈 Animación suave */
+        z-index: 1001;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.5);
     }
 
     #nav-menu a {
-        display: block;
-        margin: 15px 0;
+        font-size: 1.3rem;
+        padding: 15px;
     }
 
     #nav-menu.active {
-        display: flex;
+         right: 0; /* 👈 Se desliza adentro */
     }
 }
 
@@ -1542,5 +1574,258 @@ body {
         font-size: 1.2rem;
         padding: 10px 20px;
         transition: color 0.3s;
+    }
+}
+@media (max-width: 768px) {
+    /* Contenedor de resultados: 1 columna que ocupe todo */
+    .season-results {
+        grid-template-columns: 1fr !important; /* 👈 Una sola columna ancha */
+        gap: 15px;
+    }
+
+    /* Cada columna de competencia: 100% del ancho */
+    .competition-col {
+        width: 85% !important;
+        min-width: auto !important;
+        padding: 15px;
+    }
+
+    /* Títulos de competencia: que no se corten */
+    .competition-col h4 {
+        font-size: 0.9rem;
+        text-align: center;
+        white-space: normal; /* 👈 Permite saltos de línea */
+        word-wrap: break-word;
+        padding: 10px 5px;
+    }
+
+    /* Barras de resultados: texto legible */
+    .rank-pill {
+        font-size: 0.75rem;
+        padding: 8px 5px;
+        white-space: normal; /* 👈 Permite saltos de línea */
+        word-wrap: break-word;
+        text-align: center;
+        min-height: auto;
+        line-height: 1.3;
+    }
+
+    /* Ajusta la tarjeta expandida */
+    .timeline-content.expanded .side-details {
+        padding: 15px;
+    }
+
+    /* Evita scroll horizontal */
+    .timeline-content {
+        overflow-x: hidden;
+    }
+
+    /* Imágenes: que no se salgan */
+    .timeline-img {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        object-fit: cover;
+    }
+}
+/* SECCIÓN GENERAL */
+.sponsors-section {
+    padding: 80px 20px;
+    background: #0a0a0a; /* Fondo muy oscuro */
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+}
+
+.highlight-green {
+    color: #50C878; /* Tu verde esmeralda */
+}
+
+.tier-tier {
+    margin-bottom: 70px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* TÍTULOS DE NIVEL */
+.tier-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* === TARJETAS BASE === */
+.sponsor-card {
+    background: #151515;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.sponsor-card:hover {
+    transform: scale(1.03);
+}
+
+.sponsor-card img {
+    max-width: 100%;
+    height: 100px; /* Altura fija para uniformidad */
+    object-fit: contain;
+    filter: grayscale(100%); /* Opcional: Logos en gris que se colorean al pasar el mouse */
+    transition: filter 0.3s;
+}
+
+.sponsor-card:hover img {
+    filter: grayscale(0%);
+}
+
+.sponsor-card h4 {
+    margin-top: 15px;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* === NIVEL DIAMANTE (Cyan/Blanco brillante) === */
+.title-diamond {
+    background: linear-gradient(to right, #b9f2ff, #fff, #b9f2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sponsor-card.diamond {
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    max-width: 400px;
+    margin: 0 auto; /* Centrado */
+    height: 250px; /* Más grande */
+}
+
+.sponsor-card.diamond img {
+    height: 150px;
+}
+
+/* === NIVEL PLATINO (Plata/Azul acero) === */
+.title-platinum {
+    color: #a0a0a0;
+}
+
+.sponsor-card.platinum {
+    border: 1px solid #5a6b7a;
+    box-shadow: 0 5px 15px rgba(90, 107, 122, 0.2);
+    height: 200px;
+}
+
+.sponsor-card.platinum:hover {
+    border-color: #8fa1b3;
+    box-shadow: 0 0 15px rgba(143, 161, 179, 0.4);
+}
+
+/* === NIVEL ORO (Dorado) === */
+.title-gold {
+    background: linear-gradient(to right, #d4af37, #f3e5ab, #d4af37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sponsor-card.gold {
+    border: 1px solid #d4af37;
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.15);
+    height: 180px;
+}
+
+.sponsor-card.gold:hover {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+/* === NIVEL PLATA (Gris simple) === */
+.title-silver {
+    color: #777;
+}
+
+.sponsor-card.silver {
+    border: 1px solid #444;
+    height: 150px;
+}
+
+.sponsor-card.silver:hover {
+    border-color: #777;
+}
+
+/* === GRID LAYOUTS === */
+.sponsors-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Ajustes de ancho para que se vea bien la jerarquía */
+.sponsors-grid { max-width: 900px; margin: 0 auto; }
+.sponsors-grid.gold-grid { max-width: 1000px; }
+.sponsors-grid.silver-grid { max-width: 1100px; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .sponsor-card { width: 100%; }
+    .sponsor-card.diamond { width: 90%; }
+    .sponsors-grid { gap: 10px; }
+}
+.media-protected {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.protect-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 10;
+    cursor: default;
+}
+/* === HACER SCROLL EN COLUMNAS DE RESULTADOS === */
+.competition-col {
+    max-height: 400px; /* 👈 Altura máxima antes de hacer scroll */
+    overflow-y: auto;  /* 👈 Scroll vertical cuando hay mucho contenido */
+    padding-right: 10px; /* Espacio para el scrollbar */
+}
+
+/* Personalizar scrollbar (opcional, se ve más profesional) */
+.competition-col::-webkit-scrollbar {
+    width: 6px;
+}
+
+.competition-col::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 3px;
+}
+
+.competition-col::-webkit-scrollbar-thumb {
+    background: #50C878; /* Tu verde esmeralda */
+    border-radius: 3px;
+}
+
+.competition-col::-webkit-scrollbar-thumb:hover {
+    background: #3da863; /* Verde más oscuro al hover */
+}
+
+/* === PARA MÓVIL (altura más pequeña) === */
+@media (max-width: 768px) {
+    .competition-col {
+        max-height: 300px; /* 👈 Más bajo en celular */
     }
 }

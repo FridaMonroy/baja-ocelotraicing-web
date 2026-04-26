@@ -246,14 +246,14 @@ const teamMembers = {
         major: 'Ingeniería en Sistemas Automotrices',
         role: 'Recluta PowerTrain delantero FWD ',
         nickname: 'Irvin',
-        image: 'img/Irvin.jpeg',
+        image: 'img/IRVIN.jpeg',
         linkedin: 'https://linkedin.com/in/pierre-alexis'
     },
     'Miguel': {
         name: 'Miguel De Jesus',
         major: 'Ingeniería en Sistemas Automotrices',
         role: 'Recluta de CVT ',
-        nickname: 'Miguel',
+        nickname: 'Miguelon',
         image: 'img/MIGUEL.jpeg',
         linkedin: 'https://linkedin.com/in/pierre-alexis'
     }
