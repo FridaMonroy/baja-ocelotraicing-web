@@ -22,7 +22,7 @@ const teamMembers = {
         role: 'Capitan',
         nickname: 'Mike',
         image: 'img/MIKE.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'FALTA'
     },
     'Brenda': {
         name: 'Brenda Hernández',
@@ -38,7 +38,7 @@ const teamMembers = {
         role: 'Responsable de Recursos materiales',
         nickname: 'RS',
         image: 'img/RODRIGO.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'FALTA'
     },
     'Isai': {
         name: 'Isai Vilchis',
@@ -46,7 +46,7 @@ const teamMembers = {
         role: 'Lider de Suspensión, dirección y frenos',
         nickname: 'Sairo',
         image: 'img/ISAI.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'FALTA'
     },
     'Leo': {
         name: 'Leonardo Montes',
@@ -62,7 +62,7 @@ const teamMembers = {
         role: 'Responsable de vinculación',
         nickname: 'Sasil',
         image: 'img/SASIL.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'FALTA'
     },
     'Frida': {
         name: 'Frida Monroy',
@@ -70,7 +70,7 @@ const teamMembers = {
         role: 'Recluta de Recursos materiales',
         nickname: 'Frida',
         image: 'img/FRIDA.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'FALTA'
     },
     'Aldo': {
         name: 'Aldo Morales',
@@ -78,7 +78,7 @@ const teamMembers = {
         role: 'Recluta de redes sociales',
         nickname: 'Aldo',
         image: 'img/ALDO.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'FALTA'
     },
     'Anette': {
         name: 'Anette García',
@@ -86,7 +86,7 @@ const teamMembers = {
         role: 'Responsable de Chasís',
         nickname: 'Annete',
         image: 'img/ANETTE.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'FALTA'
     },
     'Lalo': {
         name: 'Eduardo Olvera',
@@ -94,7 +94,7 @@ const teamMembers = {
         role: 'Recluta de Chasís',
         nickname: 'Lalote',
         image: 'img/LALOTE.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'FALTA'
     },
     'Diego': {
         name: 'Diego Martinez',
@@ -110,7 +110,7 @@ const teamMembers = {
         role: 'Recluta de Ergonomía',
         nickname: 'Karen',
         image: 'img/KAREN.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'FALTA'
     }
     ,
     'Christian': {
@@ -119,7 +119,7 @@ const teamMembers = {
         role: 'Lider de Telemetría',
         nickname: 'Chris',
         image: 'img/CHRISTIAN.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'FALTA'
     },
     'Caleb': {
         name: 'Caleb Riaño',
@@ -127,7 +127,7 @@ const teamMembers = {
         role: 'Responsable de Telemetría',
         nickname: 'Caleb',
         image: 'img/CALEB.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'FALTA'
     },
     'Yair': {
         name: 'Yair Ventura',
@@ -135,7 +135,7 @@ const teamMembers = {
         role: 'Recluta de Telemetría',
         nickname: 'Yayo',
         image: 'img/YAIR.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'FALTA'
     },
     'Poncho': {
         name: 'Alfonso Soriano',
@@ -143,7 +143,7 @@ const teamMembers = {
         role: 'Responsable de suspensión',
         nickname: 'Ponchete',
         image: 'img/PONCHO.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'FALTA'
     },
     'Cesar': {
         name: 'Cesar Barron',
@@ -151,7 +151,7 @@ const teamMembers = {
         role: 'Responsable de dirección',
         nickname: 'Little Cesar',
         image: 'img/CESAR.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'FALTA'
     },
     'Asiel': {
         name: 'Asiel Méndez',
@@ -159,7 +159,7 @@ const teamMembers = {
         role: 'Recluta de Suspensión',
         nickname: 'Asiel',
         image: 'img/ASIEL.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'FALTA'
     },
     'Gera': {
         name: 'Gerardo Luna',
@@ -175,7 +175,7 @@ const teamMembers = {
         role: 'Recluta de frenos',
         nickname: 'Pol',
         image: 'img/PAUL.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'FALTA'
     },
     'Lalote': {
         name: 'Eduardo Rodriguez',
@@ -215,7 +215,7 @@ const teamMembers = {
         role: 'Responsable de CVT',
         nickname: 'JP',
         image: 'img/JP.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'FALTA'
     },
     'Marco': {
         name: 'Marco Piña',
@@ -223,7 +223,7 @@ const teamMembers = {
         role: 'Responsable en PT delantero',
         nickname: 'MarcoPolo',
         image: 'img/MARCO.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'FALTA'
     },
     'Dante': {
         name: 'Dante Luna',
@@ -231,7 +231,7 @@ const teamMembers = {
         role: 'Responsable de powertrain trasero ',
         nickname: 'Dante',
         image: 'img/DANTE.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'FALTA'
     },
     'Alfonso': {
         name: 'Alfonso De la Rosa',
@@ -239,7 +239,7 @@ const teamMembers = {
         role: 'Recluta de PowerTrain trasero RWD ',
         nickname: 'Poncho2.0',
         image: 'img/ALFONSO.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'FALTA'
     },
     'Irvin': {
         name: 'Irvin Plascencia ',
@@ -247,7 +247,7 @@ const teamMembers = {
         role: 'Recluta PowerTrain delantero FWD ',
         nickname: 'Irvin',
         image: 'img/IRVIN.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'FALTA'
     },
     'Miguel': {
         name: 'Miguel De Jesus',
@@ -255,7 +255,7 @@ const teamMembers = {
         role: 'Recluta de CVT ',
         nickname: 'Miguelon',
         image: 'img/MIGUEL.jpeg',
-        linkedin: 'https://linkedin.com/in/pierre-alexis'
+        linkedin: 'FALTA'
     }
     // Agrega más miembros aquí
 };
